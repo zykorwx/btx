@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Btx</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <%= yield :head %>
+</head>
+<body>
+
+    
+<div id="logo">
+	<%= image_tag 'BetaX.png' %>
+</div>
+
+<div id="menu">
+	<% if current_user %>
+     <nav>
+      <li class="parent"><%= link_to image_tag('NoSeleccionado/imgBuscar.png', :border=>0, :alt => "Buscar", :size => "98x98", :mouseover => 'Seleccionado/imgBuscar.png' ), index_path %> </li>
+      <li class="parent"><%= link_to image_tag(current_user.avatar.url(:thumb), :id => "avatarUserLogeado", :title=> "Haz clic aqui para ver tu perfil"), verPerfil_path(:id => current_user.id)  %>
+         <ul >
+         	<li id="emailUser"><%= current_user.email %></li>
+            <li><%= link_to "Perfil", verPerfil_path(:id => current_user.id) %></li>
+            <li><%= link_to "Avatar", edit_user_path(current_user.id) %></li>
+            <li><%= link_to "Cerrar sesion", logout_path %></li>
+         </ul>
+      </li>
+      <li class="parent"><%= link_to image_tag('NoSeleccionado/ventas.png', :border=>0, :alt => "Ventas", :size => "97x97", :mouseover => 'Seleccionado/ventas.png', :class=>"imgVentaUser" ), productonegocios_path, :id=>"linkVentas" %></li>
+   </nav> 
+<% else %>
+     <nav>
+      <li class="parent"><%= link_to image_tag('NoSeleccionado/imgBuscar.png', :border=>0, :alt => "Buscar", :size => "98x98", :mouseover => 'Seleccionado/imgBuscar.png' ), index_path %></li>
+      <li class="parent"><%= link_to image_tag('NoSeleccionado/imgPerfil.png', :border=>0, :alt => "Perfil", :size => "98x98", :mouseover => 'Seleccionado/imgPerfil.png'), :controller=> "sessions", :action => 'new'  %>
+         <ul >
+         	<li><%= link_to "Iniciar sesion", login_path %></li>
+            <li><%= link_to "Registro", signup_path %></li>
+         </ul>
+      </li>
+   </nav>
+
+<% end %>
+</div>    
+    
+    
+    
+<%= yield %>
+<%= yield :scripts %>
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    <% end %>
+
+
+
+</body>
+</html>

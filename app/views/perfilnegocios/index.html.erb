@@ -1,0 +1,31 @@
+<h1>Listing perfilnegocios</h1>
+
+<table>
+  <tr>
+    <th>Nombrenegocio</th>
+    <th>Tiponegocio</th>
+    <th>Rfc</th>
+    <th>Calificacion</th>
+    <th>Fechacreacion</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @perfilnegocios.each do |perfilnegocio| %>
+  <tr>
+    <td><%= perfilnegocio.nombreNegocio %></td>
+    <td><%= perfilnegocio.tipoNegocio %></td>
+    <td><%= perfilnegocio.rfc %></td>
+    <td><%= perfilnegocio.calificacion %></td>
+    <td><%= perfilnegocio.fechaCreacion %></td>
+    <td><%= link_to 'Show', perfilnegocio %></td>
+    <td><%= link_to 'Edit', edit_perfilnegocio_path(perfilnegocio) %></td>
+    <td><%= link_to 'Destroy', perfilnegocio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Perfilnegocio', new_perfilnegocio_path %>

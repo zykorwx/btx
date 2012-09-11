@@ -1,0 +1,89 @@
+<%= form_for(@perfile) do |f| %>
+  <% if @perfile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@perfile.errors.count, "error") %> prohibited this perfile from being saved:</h2>
+
+      <ul>
+      <% @perfile.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+<table id="tablaFormDB">
+  	<td id="td1">
+<div id="basicosuser">
+	<h2 class="basico" >Información básica</h2>
+  <div class="field">
+    <%= f.label :nombre, "Nombre" %><br />
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :apepat, "Apellido paterno" %><br />
+    <%= f.text_field :apepat %>
+  </div>
+  <div class="field">
+    <%= f.label :apemat, "Apellido materno" %><br />
+    <%= f.text_field :apemat %>
+  </div>
+  <div class="field">
+    <%= f.label :fechaNacimiento, "Fecha de naciemiento" %><br />
+    <%= f.date_select  :fechaNacimiento, :start_year => 1920, :end_year => Time.now.year %>
+  </div>
+  <div class="field">
+    <%= f.label :sexo, "Sexo" %><br />
+    <%= f.select :sexo, options_for_select([["Masculino", "m"], ["Femenino", "f"]]) %>
+  </div>
+  <div class="field">
+    <%= f.label :sobreMi, "Sobre mi" %><br />
+    <%= f.text_area :sobreMi %>
+  </div>
+  </div>
+</td>
+<td id="td2">
+  <div id="direccionUser">
+  	<h2 class="direccion"> Dirección</h2>
+   <%= f.fields_for :direccionusuario do |fa| %>   
+  <div class="field">
+    <%= fa.label :calle, "Calle" %><br />
+    <%= fa.text_field :calle %>
+  </div>
+  <div class="field">
+    <%= fa.label :numInterior, "Número interior" %><br />
+    <%= fa.text_field :numInterior %>
+  </div>
+  <div class="field">
+    <%= fa.label :numExterior, "Número exterior" %><br />
+    <%= fa.text_field :numExterior %>
+  </div>
+  <div class="field">
+    <%= fa.label :codigoPostal, "Código postal" %><br />
+    <%= fa.text_field :codigoPostal %>
+  </div>
+  <div class="field">
+    <%= fa.label :colonia, "Colonia" %><br />
+    <%= fa.text_field :colonia %>
+  </div>
+  <div class="field">
+    <%= fa.label :municipio, "Municipio" %><br />
+    <%= fa.text_field :municipio %>
+  </div>
+  <div class="field">
+    <%= fa.label :estado, "Estado" %><br />
+    <%= fa.text_field :estado %>
+  </div>
+  <div class="field">
+    <%= fa.label :pais, "País" %><br />
+    <%= fa.text_field :pais %>
+  </div>
+  <% end %>
+	</div>
+</td>
+</table>  
+  <br />
+  <br />
+  <div class="divBasico">
+    <%= f.submit "Guardar", :id => 'btnEdita1'%>
+  </div>
+<% end %>

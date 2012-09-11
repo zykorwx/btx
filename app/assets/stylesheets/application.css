@@ -1,0 +1,109 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+#logo{
+margin:0 auto 0 auto;
+margin-top: 1%;
+width: 415px;
+height: 184px;
+}
+
+ #menu{
+  line-height:50%;
+  width: 98px;
+height: 98px;
+
+}
+
+
+nav li{
+   list-style: none;
+   position:relative; /* importante, para que el submenu tome la posición correcta*/
+  color:#666;
+     font-size: 18px; /* este codigo es el tamaño de letra*/
+
+}
+nav li a{
+   color:#666;
+   text-decoration:none;
+   display:block;
+}
+nav li a:hover{
+   color:#08D;
+}
+nav li.parent:hover{
+   border:1px #ccc solid;
+   background:#F8F8F8;
+}
+nav li ul li a{
+   /*width:98px;el ancho de los links del submenu, debe ser fijo, esto servirá para crear la animación mas adelante */
+
+   font-size: 18px; /* este codigo es el tamaño de letra*/
+   
+}
+/* aquí esta lo importante!! */
+nav li ul {
+   width: 196px;
+   margin:0;
+   display:none;
+   background:#EAEAEA;
+   border:1px #B2CAD8 solid;
+   position: absolute;
+   left: 100%;
+   top:-1px;
+     line-height:120%;
+     padding: 0;
+}
+nav li:hover ul {
+   display: block;
+}
+nav li ul li {
+	height: 48px;
+   text-align:center;
+   line-height:250%;
+}
+nav li ul li#emailUser {
+	font-weight:bold;
+	background:#EAEAEA;
+}
+
+nav li ul li:hover {
+   background:white;
+}
+  
+/* formato nota */ 
+#flash_alert, #flash_notice, #notice, #alert{
+    color: #666666;
+  background: url(nota2.jpg) no-repeat;
+  margin: -5% auto auto 70%; 
+  width: 241px;
+  height: 258px;
+  padding: 40px 3px;
+  text-align:center;
+}
+
+#avatarUserLogeado{
+	border:1px #00FF00 solid;
+
+}
+
+#avatarUserLogeado:hover{
+	border:3px #00FF00 solid;
+}
+
+
+
+
+
+

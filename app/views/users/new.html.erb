@@ -1,0 +1,35 @@
+<%= form_for @user do |f| %>
+ <div id="registro">
+ 	<h2 id="labelRegistro">Únete ya!</h2>
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </div>
+  <br />
+  <div class="field">
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+  <br />
+  <div class="field">
+    <%= f.label :password_confirmation, "Confirmación de password" %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+  <br />
+  <div class="divRegistro"><%= submit_tag "Registrarse" , :class=>'btnRegistro' %></div>
+  </div>
+ 
+  <% if @user.errors.any? %>
+   <div class="error_messages">
+      <br />
+        <br />
+      <h2 id="mensaje"> Algo esta incorrecto</h2>
+      <ul>
+        <% for message in @user.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+   </div>
+  <% end %>
+   
+<% end %>

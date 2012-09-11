@@ -1,0 +1,138 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#registro
+{
+text-align:left;
+margin:-10% auto 0 35%;
+width: 415px;
+
+}
+#labelRegistro{
+  color: #666;
+  margin-left: 17%;
+  width: 200px;
+}
+.field{
+  color: #666;
+    font-size: 18px;
+    width: 250px;
+}
+
+#user_email, #user_password, #user_password_confirmation{
+   -moz-box-shadow: 1px 1px 7px #000000;
+   -webkit-box-shadow: 1px 1px 7px #000000;
+  border: 1px solid #3FA9F5;
+  border-left: 2px solid #3FA9F5;
+  height: 22px;
+  width: 270px;
+  font-size: 13pt;
+  color: #3F3F3F;
+   }
+   
+.btnRegistro
+{
+    font-size: 18px;
+    color: #666;
+    padding: 0px 10px 0px 10px;
+    border: solid 2px #B2CAD8;
+    background: #EAEAEA;
+    font-weight:bold;
+    cursor: pointer;
+    height: 27px;
+}
+.btnRegistro:hover
+{
+    color: #08D;
+    background: #E4E4E4;
+    border: solid 3px #B2CAD8;
+}
+
+
+#user_avatar
+{
+    bottom:0px;
+    position:fixed;
+    font-size: 18px;
+    color: #666;
+    padding: 0px 10px 0px 10px;
+    border: solid 2px #B2CAD8;
+    background: #EAEAEA;
+    font-weight:bold;
+    cursor: pointer;
+    height: 27px;
+}
+
+
+#user_avatar:hover
+{
+    color: #08D;
+    background: #E4E4E4;
+    border: solid 3px #B2CAD8;
+}
+
+.error_messages{
+    color: #666666;
+  background: url(nota2.jpg) no-repeat; 
+  margin: -20% auto auto 70%; //top, right, bot, left --> este es el orden de los valores
+  width: 241px;
+  height: 258px;
+  padding: 40px 3px;
+  text-align:left;
+}
+.error_messages #mensaje {
+  width: 450px;
+  text-align:left;
+  font-size: 16px;
+  margin: -7% auto auto 26%;
+}
+.error_messages ul li {
+  width: 445px;
+  font-size: 15px;
+  text-align:center;
+  margin-left: -98px;
+}
+.error_messages ul  {
+  list-style: none;
+  text-decoration:none;
+  padding: 3px 3px;
+  width: 215px;
+}
+.divRegistro
+{
+  margin:0 auto 0 33%;
+}
+
+.campoCambiaAvatar{
+  margin-left: 30%;
+}
+
+#cambiaImagen{
+  margin: -9% auto 0 36%;
+    width: 540px;
+  height: 540px;
+}
+
+
+.btnGuardarImagen
+{
+    bottom:0px;
+    position:fixed;
+    font-size: 18px;
+    color: #666;
+    padding: 0px 10px 0px 10px;
+    border: solid 2px #B2CAD8;
+    background: #EAEAEA;
+    font-weight:bold;
+    cursor: pointer;
+    height: 27px;
+    margin-left: 60%;
+}
+
+
+.btnGuardarImagen:hover
+{
+    color: #08D;
+    background: #E4E4E4;
+    border: solid 3px #B2CAD8;
+}

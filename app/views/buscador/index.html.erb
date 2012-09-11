@@ -1,0 +1,15 @@
+
+<form accept-charset="UTF-8" action="/buscador/index" method="get">
+<div id="busqueda" >
+	
+	<input id="busca"name="busca" class="busca" type="text" style="width: 330px">
+	<input name="btnBusca" class="btnBusca" type="button"  style=" width:63px; height: 63px">
+</div>
+</form>
+<div id="divUbicacion">
+	<h3>Tu ubicación</h3>
+<%= @result.first.address %>
+</div>
+
+
+

@@ -1,0 +1,62 @@
+// Place all the styles related to the Buscador controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// aliniamos el  textbox
+#busqueda
+{
+text-align:center;
+margin:0 auto 0 auto;
+width: 415px;
+height: 63px;
+}
+
+
+.busca{
+   -moz-box-shadow: 1px 1px 7px #000000;
+   -webkit-box-shadow: 1px 1px 7px #000000;
+  border: 1px solid #3FA9F5;
+  border-left: 2px solid #3FA9F5;
+  height: 22px;
+  font-size: 13pt;
+  color: #3F3F3F;
+   }
+        
+// boton buscar
+.btnBusca{
+
+     border: none;
+     background: url('NoSeleccionado/imgBuscarChico.png') no-repeat top left;
+     margin-left:5px;
+}
+
+.btnBusca:hover {
+     border: none;
+     background: url('Seleccionado/imgBuscarChico.png') no-repeat top left;
+     padding: 2px 8px;
+
+ }
+ 
+ 
+#divUbicacion{
+  margin-left: 33%;
+  margin-top: 5%;
+    font-size: 13pt;
+  color: #3F3F3F;
+}
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

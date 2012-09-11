@@ -1,0 +1,43 @@
+<!-- Tabla 1 ventas -->
+<table id="tabla1">
+  	<td id="td1">
+  		
+  		<div id="MisNegocios">
+<table id="tabla2">
+  <tr>
+    <th id="titulos" colspan="2" >Mis Negocios</th>
+  </tr>
+  <tr><br /></tr>
+	<% if @productousuario != nil %>
+  <tr>
+  	<td id="info">Nombre del negocio: </td>
+  	<td id="valor">	<%= @productousuario.nombreNegocio %>			</td>
+  </tr>
+
+<% end %>
+</table>
+</div>
+
+  		
+   </td>
+   
+  	<td id="td2">	
+  		
+  		<div id="Sucursales">
+<table id="tabla3">
+  <tr>
+    <th id="titulos" colspan="2" >Sucursales</th>
+  </tr>
+    <tr><br /></tr>
+
+</table>
+<br />
+<div id="btnBasico" >
+
+<%= link_to image_tag('NoSeleccionado/editar.png', :border=>0, :alt => "editar", :size => "27x27", :mouseover => 'Seleccionado/editar.png', :class=>"basicoEditar" ) + 'Agregar datos', new_productonegocio_path, :id => "btnEdita" %>
+
+</div>
+</div>
+	
+ 	</td>
+</table>

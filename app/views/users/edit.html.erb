@@ -1,0 +1,16 @@
+<%= form_for  @user  do |f| %>
+
+	<div class="campoCambiaAvatar">
+		<%= f.file_field :avatar , :title => "Elegir imagen" %>
+	</div>
+	
+	<div class="divCambiarImagen">
+		<%= f.submit "Guardar cambios", :class=>'btnGuardarImagen', :title => "Haz clic aqui para guardar los cambios" %>
+	</div>
+<%end%>
+
+<div id="cambiaImagen">
+<% if  @user != nil %>
+<%= image_tag @user.avatar.url(:grande), :id => "idAvatarUpdate", :title=> "Este es tu avatar!" %>
+<% end %>
+</div>

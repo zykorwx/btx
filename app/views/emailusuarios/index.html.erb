@@ -1,0 +1,25 @@
+<h1>Listing emailusuarios</h1>
+
+<table>
+  <tr>
+    <th>Emailalternativo</th>
+    <th>Email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @emailusuarios.each do |emailusuario| %>
+  <tr>
+    <td><%= emailusuario.emailAlternativo %></td>
+    <td><%= emailusuario.email %></td>
+    <td><%= link_to 'Show', emailusuario %></td>
+    <td><%= link_to 'Edit', edit_emailusuario_path(emailusuario) %></td>
+    <td><%= link_to 'Destroy', emailusuario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Emailusuario', new_emailusuario_path %>

@@ -1,0 +1,59 @@
+// Place all the styles related to the telefonousuarios controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#divTelefonos{
+    margin: -5% auto 0 37%;
+  width: 330px;
+  box-shadow: 0px 0px 5px #666;
+  border-radius:5px;
+  height: 250px;
+}
+
+#btnGuardarTelefono{
+      font-size: 18px;
+    color: #666;
+    padding: 0px 10px 0px 10px;
+    border: solid 2px #B2CAD8;
+    background: #EAEAEA;
+    font-weight:bold;
+    cursor: pointer;
+    height: 27px;
+    text-decoration:none;
+}
+
+#btnGuardarTelefono:hover{
+    color: #08D;
+    background: #E4E4E4;
+    border: solid 3px #B2CAD8;
+  }
+  
+.field{
+  color: #666;
+    font-size: 18px;
+    margin-left: 17%;
+}
+
+.divBtnGuardarTelefono{
+  margin:0 auto 0 17%;
+}
+
+#titulos1{
+  color: #666;  
+  text-align:center;
+}
+
+
+
+#telefonousuario_telefono,
+#telefonousuario_tipo,
+#emailusuario_emailAlternativo{
+   -moz-box-shadow: 1px 1px 7px #000000;
+   -webkit-box-shadow: 1px 1px 7px #000000;
+  border: 1px solid #3FA9F5;
+  border-left: 2px solid #3FA9F5;
+  height: 22px;
+  width: 230px;
+  font-size: 13pt;
+  color: #3F3F3F;
+}

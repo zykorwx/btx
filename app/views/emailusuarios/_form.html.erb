@@ -1,0 +1,25 @@
+<%= form_for(@emailusuario) do |f| %>
+  <% if @emailusuario.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@emailusuario.errors.count, "error") %> prohibited this emailusuario from being saved:</h2>
+
+      <ul>
+      <% @emailusuario.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+   <%= f.hidden_field :idUser, :value => current_user.id  %>
+  <div id="divFormEmail">
+	<h2 id="titulos1">Email de contacto</h2>
+  <div class="field">
+    <%= f.label :emailAlternativo, "Email" %><br />
+    <%= f.text_field :emailAlternativo %>
+  </div>
+  <br />
+  <div class="divBtnGuardarEmail">
+    <%= f.submit  "Guardar", :id=>"btnGuardarEmail"%>
+  </div>
+<% end %>
+</div>

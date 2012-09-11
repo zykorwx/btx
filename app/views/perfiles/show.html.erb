@@ -1,0 +1,146 @@
+<!-- Tabla 1 datos basicos -->
+<table id="tabla1">
+  	<td id="td1">
+  		
+  		<div id="datosBasicos">
+<table id="tabla2">
+  <tr>
+    <th id="titulos" colspan="2" >Datos básicos: Generales</th>
+  </tr>
+  <tr><br /></tr>
+	<% if @perfilusuarios != nil %>
+  <tr>
+  	<td id="info">Nombre: </td>
+  	<td id="valor">	<%= @perfilusuarios.nombre %>			</td>
+  </tr>
+  <tr>
+  	<td id="info">Apellido paterno: </td>
+  	<td id="valor">	<%= @perfilusuarios.apepat %>			</td>
+  </tr>
+  <tr>
+  	<td id="info">Apellido materno: </td>
+  	<td id="valor">	<%= @perfilusuarios.apemat %>			</td>
+  </tr>
+  <tr>
+  	<td id="info">Sexo: </td>
+  	<td id="valor">	<%= @perfilusuarios.sexo %>			</td>
+  </tr>
+  <tr>
+  	<td id="info">Fecha de nacimiento </td>
+  	<td id="valor">	<%= @perfilusuarios.fechaNacimiento %>			</td>
+  </tr>
+  <tr>
+  	<td id="info">Sobre mi </td>
+  	<td id="valor">	<%= @perfilusuarios.sobreMi %>			</td>
+  </tr>
+
+<% end %>
+</table>
+</div>
+
+  		
+   </td>
+   
+  	<td id="td2">	
+  		
+  		<div id="datosBasicos2">
+<table id="tabla3">
+  <tr>
+    <th id="titulos" colspan="2" >Datos básicos: Dirección </th>
+  </tr>
+    <tr><br /></tr>
+	<% if @perfilusuarios != nil %>
+  <tr>
+  	<td id="info">Calle: </td>
+  	<td id="valor">	<%= @perfilusuarios.direccionusuario.calle %>			</td>
+  </tr>
+  <tr>
+  	<td id="info">Número interior: </td>
+  	<td id="valor">	<%= @perfilusuarios.direccionusuario.numInterior %>			</td>
+  </tr>
+  <tr>
+  	<td id="info">Número exterior: </td>
+  	<td id="valor">	<%= @perfilusuarios.direccionusuario.numExterior %>			</td>
+  </tr>
+  <tr>
+  	<td id="info">Código postal: </td>
+  	<td id="valor">	<%= @perfilusuarios.direccionusuario.codigoPostal %>			</td>
+  </tr>
+  <tr>
+  	<td id="info">Colonia: </td>
+  	<td id="valor">	<%= @perfilusuarios.direccionusuario.colonia %>			</td>
+  </tr>
+  <tr>
+  	<td id="info">Municipio: </td>
+  	<td id="valor">	<%= @perfilusuarios.direccionusuario.municipio %>			</td>
+  </tr>
+  <tr>
+  	<td id="info">Estado: </td>
+  	<td id="valor">	<%= @perfilusuarios.direccionusuario.estado %>			</td>
+  </tr>
+  <tr>
+  	<td id="info">País: </td>
+  	<td id="valor">	<%= @perfilusuarios.direccionusuario.pais %>			</td>
+  </tr>
+<% end %>
+</table>
+<br />
+<div id="btnBasico" >
+<% if @valor == 0  %>
+<%= link_to image_tag('NoSeleccionado/editar.png', :border=>0, :alt => "editar", :size => "27x27", :mouseover => 'Seleccionado/editar.png', :class=>"basicoEditar" ) + 'Agregar datos', new_perfile_path, :id => "btnEdita" %>
+<% else %>
+<%= link_to image_tag('NoSeleccionado/editar.png', :border=>0, :alt => "editar", :size => "27x27", :mouseover => 'Seleccionado/editar.png', :class=>"basicoEditar" ) + 'Editar', edit_perfile_path(current_user.id), :id => "btnEdita" %>
+<% end %>
+</div>
+</div>
+
+  		
+ 	</td>
+</table>
+<!-- Tabla 2 Direccion -->
+<table id="tabla_1">
+
+<td id="td_1">
+<div id="telefonos">
+<table>
+  <tr>
+    <th id="titulos">Teléfonos: </th>
+  </tr>
+	<% if @telefonos != nil %>
+<% @telefonos.each do |telefono| %>
+  <tr>
+  	<td id="info"><%= telefono.tipo + ": " %></td>
+    <td id="valor"><%= telefono.telefono %></td> 
+    <td><%= link_to image_tag('NoSeleccionado/editar.png', :border=>0, :alt => "editar", :size => "27x27", :mouseover => 'Seleccionado/editar.png' ), edit_telefonousuario_path(telefono) %></td>
+    <td><%= link_to image_tag('NoSeleccionado/Eliminar.png', :border=>0, :alt => "Eliminar", :size => "27x27", :mouseover => 'Seleccionado/Eliminar.png' ), telefono, method: :delete, data: { confirm: '¿Estas seguro de eliminar el telefono?' } %></td>
+  </tr>
+<% end %>
+<% end %>
+</table>
+<%= link_to image_tag('NoSeleccionado/agregar.png', :border=>0, :alt => "agregar", :size => "27x27", :mouseover => 'Seleccionado/agregar.png', :class=>"imgAgregarTel" ) + ' Agregar', new_telefonousuario_path, :id=>"linkAgregarTel" %>
+</div>
+</td>
+
+<td id="td_2">
+<div id="divEmails">
+<table>
+  <tr>
+    <th id="titulos">Emails: </th>
+  </tr>
+	<% if @emails != nil %>
+<% @emails.each do |email| %>
+  <tr>
+    <td id="valor"><%= email.emailAlternativo %></td> 
+    <td><%= link_to image_tag('NoSeleccionado/editar.png', :border=>0, :alt => "editar", :size => "27x27", :mouseover => 'Seleccionado/editar.png' ), edit_emailusuario_path(email) %></td>
+    <td><%= link_to image_tag('NoSeleccionado/Eliminar.png', :border=>0, :alt => "Eliminar", :size => "27x27", :mouseover => 'Seleccionado/Eliminar.png' ), email, method: :delete, data: { confirm: '¿Estas seguro de eliminar el email?' } %></td>
+  </tr>
+<% end %>
+<% end %>
+</table>
+ <%= link_to image_tag('NoSeleccionado/agregar.png', :border=>0, :alt => "agregar", :size => "27x27", :mouseover => 'Seleccionado/agregar.png', :class=>"imgAgregarTel" ) + ' Agregar', new_emailusuario_path, :id=>"linkAgregarTel" %>
+</div>
+</td>
+</table>
+
+
+

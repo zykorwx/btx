@@ -1,0 +1,55 @@
+// Place all the styles related to the Sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#IniciaSesion
+{
+text-align:left;
+margin:-10% auto 0 35%;
+width: 415px;
+height: 63px;
+}
+
+#labelLogin{
+  color: #666;
+  margin-left: 17%;
+}
+.field{
+  color: #666;
+    font-size: 18px;
+}
+
+#email, #password{
+   -moz-box-shadow: 1px 1px 7px #000000;
+   -webkit-box-shadow: 1px 1px 7px #000000;
+  border: 1px solid #3FA9F5;
+  border-left: 2px solid #3FA9F5;
+  height: 22px;
+  width: 270px;
+  font-size: 13pt;
+  color: #3F3F3F;
+   }
+   
+.btnEntrar
+{
+    font-size: 18px;
+    color: #666;
+    padding: 0px 10px 0px 10px;
+    border: solid 2px #B2CAD8;
+    background: #EAEAEA;
+    font-weight:bold;
+    cursor: pointer;
+
+    height: 27px;
+}
+.btnEntrar:hover
+{
+    color: #08D;
+    background: #E4E4E4;
+    border: solid 3px #B2CAD8;
+}
+.divEntrar
+{
+  margin:0 auto 0 17%;
+}

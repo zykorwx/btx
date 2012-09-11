@@ -1,0 +1,34 @@
+<h1>Listing productousuarios</h1>
+
+<table>
+  <tr>
+	<th>Email</th>
+    <th>Nombre</th>
+    <th>Descripcion</th>
+    <th>Costo</th>
+    <th>Calificacion</th>
+    <th>Fechacaptura</th>
+ 
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @productousuarios.each do |productousuario| %>
+  <tr>
+
+    <td><%= productousuario.email %></td>
+    <td><%= productousuario.nombre %></td>
+    <td><%= productousuario.descripcion %></td>
+    <td><%= productousuario.costo %></td>
+    <td><%= productousuario.calificacion %></td>
+    <td><%= productousuario.fechaCaptura %></td>  
+
+    <td><%= link_to 'Show', productousuario %></td>
+    <td><%= link_to 'Edit', edit_productousuario_path(productousuario) %></td>
+    <td><%= link_to 'Destroy', productousuario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />

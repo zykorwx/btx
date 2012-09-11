@@ -1,0 +1,37 @@
+<%= form_for(@perfilnegocio) do |f| %>
+  <% if @perfilnegocio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@perfilnegocio.errors.count, "error") %> prohibited this perfilnegocio from being saved:</h2>
+
+      <ul>
+      <% @perfilnegocio.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombreNegocio %><br />
+    <%= f.text_field :nombreNegocio %>
+  </div>
+  <div class="field">
+    <%= f.label :tipoNegocio %><br />
+    <%= f.text_field :tipoNegocio %>
+  </div>
+  <div class="field">
+    <%= f.label :rfc %><br />
+    <%= f.text_field :rfc %>
+  </div>
+  <div class="field">
+    <%= f.label :calificacion %><br />
+    <%= f.text_field :calificacion %>
+  </div>
+  <div class="field">
+    <%= f.label :fechaCreacion %><br />
+    <%= f.datetime_select :fechaCreacion %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

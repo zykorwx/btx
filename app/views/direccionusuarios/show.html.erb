@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Calle:</b>
+  <%= @direccionusuario.calle %>
+</p>
+
+<p>
+  <b>Numinterior:</b>
+  <%= @direccionusuario.numInterior %>
+</p>
+
+<p>
+  <b>Numexterior:</b>
+  <%= @direccionusuario.numExterior %>
+</p>
+
+<p>
+  <b>Codigopostal:</b>
+  <%= @direccionusuario.codigoPostal %>
+</p>
+
+<p>
+  <b>Colonia:</b>
+  <%= @direccionusuario.colonia %>
+</p>
+
+<p>
+  <b>Municipio:</b>
+  <%= @direccionusuario.municipio %>
+</p>
+
+<p>
+  <b>Estado:</b>
+  <%= @direccionusuario.estado %>
+</p>
+
+<p>
+  <b>Pais:</b>
+  <%= @direccionusuario.pais %>
+</p>
+
+
+<%= link_to 'Edit', edit_direccionusuario_path(@direccionusuario) %> |
+<%= link_to 'Back', direccionusuarios_path %>

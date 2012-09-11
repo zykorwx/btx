@@ -1,0 +1,21 @@
+<h1>Listing perfiles</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @perfiles.each do |perfile| %>
+  <tr>
+    <td><%= link_to 'Show', perfile %></td>
+    <td><%= link_to 'Edit', edit_perfile_path(perfile) %></td>
+    <td><%= link_to 'Destroy', perfile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Perfile', new_perfile_path %>

@@ -1,0 +1,37 @@
+<h1>Listing direccion_negocios</h1>
+
+<table>
+  <tr>
+    <th>Calle</th>
+    <th>Numinterior</th>
+    <th>Numexterior</th>
+    <th>Codigopostal</th>
+    <th>Colonia</th>
+    <th>Municipio</th>
+    <th>Estado</th>
+    <th>Pais</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @direccion_negocios.each do |direccion_negocio| %>
+  <tr>
+    <td><%= direccion_negocio.calle %></td>
+    <td><%= direccion_negocio.numInterior %></td>
+    <td><%= direccion_negocio.numExterior %></td>
+    <td><%= direccion_negocio.codigoPostal %></td>
+    <td><%= direccion_negocio.colonia %></td>
+    <td><%= direccion_negocio.municipio %></td>
+    <td><%= direccion_negocio.estado %></td>
+    <td><%= direccion_negocio.pais %></td>
+    <td><%= link_to 'Show', direccion_negocio %></td>
+    <td><%= link_to 'Edit', edit_direccion_negocio_path(direccion_negocio) %></td>
+    <td><%= link_to 'Destroy', direccion_negocio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Direccion negocio', new_direccion_negocio_path %>

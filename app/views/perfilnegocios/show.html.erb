@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombrenegocio:</b>
+  <%= @perfilnegocio.nombreNegocio %>
+</p>
+
+<p>
+  <b>Tiponegocio:</b>
+  <%= @perfilnegocio.tipoNegocio %>
+</p>
+
+<p>
+  <b>Rfc:</b>
+  <%= @perfilnegocio.rfc %>
+</p>
+
+<p>
+  <b>Calificacion:</b>
+  <%= @perfilnegocio.calificacion %>
+</p>
+
+<p>
+  <b>Fechacreacion:</b>
+  <%= @perfilnegocio.fechaCreacion %>
+</p>
+
+
+<%= link_to 'Edit', edit_perfilnegocio_path(@perfilnegocio) %> |
+<%= link_to 'Back', perfilnegocios_path %>

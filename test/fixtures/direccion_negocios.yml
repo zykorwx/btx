@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  calle: MyString
+  numInterior: MyString
+  numExterior: MyString
+  codigoPostal: MyString
+  colonia: MyString
+  municipio: MyString
+  estado: MyString
+  pais: MyString
+
+two:
+  calle: MyString
+  numInterior: MyString
+  numExterior: MyString
+  codigoPostal: MyString
+  colonia: MyString
+  municipio: MyString
+  estado: MyString
+  pais: MyString

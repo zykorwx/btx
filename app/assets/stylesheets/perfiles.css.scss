@@ -1,0 +1,121 @@
+// Place all the styles related to the perfiles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#imagenPerfil{
+  width: 180px;
+  height: 180px;
+  margin-top: -66%;
+  
+}
+
+
+#idAvatar
+{
+   border:3px #EAEAEA solid;
+}
+
+#idAvatar:hover
+{
+   border:3px #08D solid;
+}
+
+#tabla1{
+  margin: -8% auto 0 28%;
+}
+
+#tabla2{
+  margin: 0% auto 0 5%;
+}
+
+#tabla3{
+  margin: 0% auto 0 3%;
+}
+
+#datosBasicos{
+   // margin: -43% auto 0 100%;
+  width: 300px;
+  background-color: #EAEAEA;
+    padding: 1% 1% 1%;
+      box-shadow: 0px 0px 5px #666;
+  border-radius:5px;
+  height: 370px;
+}
+
+#datosBasicos2{
+  width: 300px;
+  background-color: #EAEAEA;
+    padding: 1% 1% 1%;
+      box-shadow: 0px 0px 5px #666;
+  border-radius:5px;
+  height: 370px;
+}
+
+#telefonos{   
+  width: 250px;
+  background-color: #EAEAEA;
+    padding: 1% 1% 1%;
+      box-shadow: 0px 0px 5px #666;
+  border-radius:5px;
+  height: 250px;
+}
+
+#divEmails{  
+  width: 250px;
+  background-color: #EAEAEA;
+    padding: 1% 1% 1%;
+      box-shadow: 0px 0px 5px #666;
+  border-radius:5px;
+  height: 250px;
+}
+
+#linkAgregarTel, #btnEdita{
+  font-size: 27px;
+  color:#666;
+   text-decoration:none;
+   display:block;
+}
+
+#linkAgregarTel:hover,
+#btnEdita:hover{
+color:#08D;
+}
+
+#titulos{
+  color: #666;  
+}
+
+#info
+{
+  color: #666; 
+}
+
+#valor{
+  color: #4F7084;
+  
+}
+
+img.imgAgregarTel,
+img.basicoEditar{
+  vertical-align:text-top;
+  vertical-align:middle;
+}
+
+#btnBasico{
+  text-align:center;
+  margin-top:10%;
+  // margin-left: 60%;
+     display:block;
+}
+
+#divBtnVentas
+{
+margin-left: 75%;
+margin-top: -8%;
+}
+
+#tabla_1{
+  margin-left: 31.7%;
+}
+

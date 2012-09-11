@@ -1,0 +1,133 @@
+// Place all the styles related to the perfilusuarios controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#btnEdita1
+{
+    font-size: 18px;
+    color: #666;
+    padding: 0px 10px 0px 10px;
+    border: solid 2px #B2CAD8;
+    background: #EAEAEA;
+    font-weight:bold;
+    cursor: pointer;
+    height: 27px;
+    text-decoration:none;
+}
+#btnEdita1:hover
+{
+    color: #08D;
+    background: #E4E4E4;
+    border: solid 3px #B2CAD8;
+}
+
+
+
+
+.edit_perfilusuario,
+.new_perfilusuario
+{
+margin-top: -10%;
+margin-left: 20%;
+}
+.basico{
+  color: #666;
+  margin-left: 23%;
+  padding-top: 3%;
+}
+.direccion{
+  color: #666;
+  margin-left: 40%;
+  padding-top: 3%;
+}
+
+#basicosuser{
+
+  //margin: -35% auto 0 55%;
+  width: 415px;
+  box-shadow: 0px 0px 5px #666;
+  border-radius:5px;
+  height: 470px;
+
+}
+#direccionUser{
+
+  //margin: -113.2% auto 0 155%;
+  width: 415px;
+  box-shadow: 0px 0px 5px #666;
+  border-radius:5px;
+  height: 470px;
+}  
+
+
+.field{
+  color: #666;
+    font-size: 18px;
+    margin-left: 17%;
+}
+
+#perfilusuario_direccionusuario_attributes_calle,
+#perfilusuario_direccionusuario_attributes_numInterior,
+#perfilusuario_direccionusuario_attributes_numExterior,
+#perfilusuario_direccionusuario_attributes_codigoPostal,
+#perfilusuario_direccionusuario_attributes_colonia,
+#perfilusuario_direccionusuario_attributes_municipio,
+#perfilusuario_direccionusuario_attributes_estado,
+#perfilusuario_direccionusuario_attributes_pais,
+#perfilusuario_nombre, #perfilusuario_apepat,
+#perfilusuario_apemat,
+#perfilusuario_sexo{
+   -moz-box-shadow: 1px 1px 7px #000000;
+   -webkit-box-shadow: 1px 1px 7px #000000;
+  border: 1px solid #3FA9F5;
+  border-left: 2px solid #3FA9F5;
+  height: 22px;
+  width: 270px;
+  font-size: 13pt;
+  color: #3F3F3F;
+  
+   }
+#perfilusuario_sobreMi{
+     -moz-box-shadow: 1px 1px 7px #000000;
+   -webkit-box-shadow: 1px 1px 7px #000000;
+  border: 1px solid #3FA9F5;
+  border-left: 2px solid #3FA9F5;
+    font-size: 13pt;
+  color: #3F3F3F;
+  width: 270px;
+  height: 88px;
+  
+}   
+#perfilusuario_fechaNacimiento_1i,
+#perfilusuario_fechaNacimiento_2i,
+#perfilusuario_fechaNacimiento_3i{
+   -moz-box-shadow: 1px 1px 7px #000000;
+   -webkit-box-shadow: 1px 1px 7px #000000;
+  border: 1px solid #3FA9F5;
+  border-left: 2px solid #3FA9F5;
+  font-size: 13pt;
+  color: #3F3F3F;
+   }
+  
+   .btnguardar{
+         font-size: 18px;
+    color: #666;
+    padding: 0px 10px 0px 10px;
+    border: solid 2px #B2CAD8;
+    background: #EAEAEA;
+    font-weight:bold;
+    cursor: pointer;
+
+    height: 27px;
+}
+.btnguardar:hover
+{
+    color: #08D;
+    background: #E4E4E4;
+    border: solid 3px #B2CAD8;
+}
+
+.divBasico
+{
+   margin:-3% auto 0 37%;
+}

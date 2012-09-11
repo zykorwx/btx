@@ -1,0 +1,31 @@
+<%= form_for(@telefonousuario) do |f| %>
+  <% if @telefonousuario.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@telefonousuario.errors.count, "error") %> prohibited this telefonousuario from being saved:</h2>
+
+      <ul>
+      <% @telefonousuario.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ <%= f.hidden_field :idUser, :value => current_user.id  %>
+<div id="divTelefonos">
+	<br />
+	<h2 id="titulos1">Telefono</h2>
+  <div class="field">
+    <%= f.label :telefono %><br />
+    <%= f.text_field :telefono %>
+  </div>
+  <div class="field">
+    <%= f.label :tipo %><br />
+    <%= f.text_field :tipo %>
+  </div>
+  <br />
+  <div class="divBtnGuardarTelefono">
+    <%= f.submit "Guardar", :id=>"btnGuardarTelefono"%>
+  </div>
+  </div>
+<% end %>
